@@ -8,6 +8,8 @@ public class Fabricante {
 	private String nombre;
 	private Pais pais;
 	private static List<Fabricante> listadof = new ArrayList<>();
+	private List<Vehiculo> listadov = new ArrayList<>();
+
 
 	public Fabricante(String nombre, Pais pais) {
 		super();
@@ -19,7 +21,12 @@ public class Fabricante {
 	public Fabricante() {
 		listadof.add(this);
 	}
-
+	public  List<Vehiculo> getListadov() {
+		return listadov;
+	}
+	public  void setListadov(Vehiculo v) {
+		listadov.add(v);
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -48,8 +55,8 @@ public class Fabricante {
 		int contador=0;
 		Fabricante fabricante=null;
 		for (Fabricante f:listadof) {
-			if(f.getListadof().size()>contador) {
-				contador=f.getListadof().size();
+			if(f.getListadov().size()>contador) {
+				contador=f.getListadov().size();
 				fabricante=f;
 		}
 		

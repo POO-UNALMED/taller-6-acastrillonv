@@ -10,6 +10,7 @@ public class Vehiculo {
 	private String traccion;
 	private Fabricante fabricante;
 	public static int cantidadVehiculos;
+	
 
 
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
@@ -21,6 +22,7 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
+		fabricante.setListadov(this);
 		cantidadVehiculos++;
 
 	}
